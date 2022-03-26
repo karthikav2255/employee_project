@@ -1,0 +1,22 @@
+{%extends 'cbase.html'%}
+{%block body_block%}
+<div class="container ">
+    <div class="row">
+        {%for employee in employees%}
+        <div class="col-4 p-3">
+            <div class="card" style="width: 18rem;">
+                {%if employee.image%}
+                <img src="{{employee.image.url}}" class="card-img-top" alt="...">
+                {%endif%}
+                <div class="card-body">
+                    <h5 class="card-title">{{employee.employee_name}}</h5>
+                    <p class="card-text">Designation:{{employee.designation}}</p>
+                    <p class="card-text">Designation:{{employee.salary}}</p>
+                    <p class="card-text">Designation:{{employee.experience}}</p>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
